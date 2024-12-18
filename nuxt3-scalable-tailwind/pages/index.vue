@@ -8,11 +8,11 @@
     meta: [
       { 
         name: 'description', 
-        content: 'Home Nuxt 3, IT Fluke' 
+        content: 'Home Nuxt 3, IT Genius Engineering' 
       },
       {
         name: 'keywords',
-        content: 'Home, Nuxt 3, Learning Nuxt 3 Fluke'
+        content: 'Home, Nuxt 3, Learning Nuxt 3'
       },
     ],
   })
@@ -28,17 +28,17 @@
           >
             <img
               src="~/assets/images/smk.jpg"
-              alt="Fluke"
+              alt="Samit Koyom"
               class="absolute w-full h-full object-cover"
             />
           </div>
           <div>
-            <h1 class="text-2xl font-bold">Hi, I am Fluke</h1>
+            <h1 class="text-2xl font-bold">Hi, I am Samit</h1>
             <p class="mt-3 hero__des mb-5">
               I built Nuxt 3 Blog, for Learning. <br />In my free time code something for hobby.
             </p>
             <a
-              href="https://www.facebook.com/RatchanonDechaza07x/"
+              href="https://twitter.com/iamsamit"
               class="bg-sky-500 hover:bg-primary-600 py-2 px-4 rounded text-white inline-flex items-center gap-2"
             >
               <svg
@@ -72,7 +72,6 @@
             :excerpt="post.excerpt.rendered"
             :slug="post.slug"
           ></BlogGrid>
-          
 
         </div>
       </div>

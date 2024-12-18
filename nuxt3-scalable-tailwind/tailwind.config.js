@@ -4,7 +4,7 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 
 
-export default {
+module.exports = {
   mode: 'jit',
   content: [
     "./components/**/*.{js,vue,ts}",

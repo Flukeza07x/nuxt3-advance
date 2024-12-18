@@ -1,19 +1,13 @@
 <script lang="ts" setup>
-
 useHead({
-    title: 'Contract',
-    meta: [
-      { 
-        name: 'description', 
-        content: 'Contract Nuxt 3, IT Fluke' 
-      },
-      {
-        name: 'keywords',
-        content: 'Contract, Nuxt 3, Learning Nuxt 3 Fluke'
-      },
-    ],
-  })
-
+  title: "Contact",
+  meta: [
+    {
+      name: "description",
+      content: "Contact",
+    },
+  ],
+});
 </script>
 
 <template>
