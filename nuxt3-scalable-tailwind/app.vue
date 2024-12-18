@@ -1,23 +1,13 @@
-
-
 <!-- 
-<template> -->
-  <!-- <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div> -->
-  
-    <!-- <div class="flex justify-center items-center h-screen">
+<template>
+  <div class="flex justify-center items-center h-screen">
     <h1 class="text-3xl font-bold text-purple-600 animate-bounce">
-      <Icon name="icon-park:home-two"></Icon>
-      <Icon name="ic:baseline-house-siding"></Icon>
-      <Icon name="ic:baseline-alarm"></Icon>
-      Hello Nuxt 3 FLuke
-   
+      <Icon name="icon-park:home-two"></Icon> 
+      <Icon name="ic:twotone-wb-sunny"></Icon> Hello Nuxt 3
     </h1>
-  </div>
-
-</template> -->
+</div>
+</template> 
+-->
 
 <template>
 
@@ -30,4 +20,3 @@
   </NuxtLayout>
 
 </template>
-

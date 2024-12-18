@@ -4,11 +4,11 @@
     meta: [
       { 
         name: 'description', 
-        content: 'Home Nuxt 3, Fluke' 
+        content: 'Home Nuxt 3, Flukeza07x' 
       },
       {
         name: 'keywords',
-        content: 'Home, Nuxt 3, Learning Nuxt 3 Fluke'
+        content: 'Home, Nuxt 3, Learning Nuxt 3 Flukeza07x'
       },
     ],
   })
@@ -26,14 +26,14 @@
       >
         <div class="w-full sm:w-6/12">
           <h1 class="text-4xl sm:text-6xl font-bold xl:leading-[4rem] text-skin-base">
-            ลำโพงบลูทูชที่ยอดเยี่ยม
+            รัก Ironman มากๆ
           </h1>
           <p class="text-xl mt-4 mb-14 text-skin-muted">
-            จากค่ายมาแชลอันโด่งดัง
+            รัก Ironman มากๆ
           </p>
           <div class="space-x-4">
             <button class="text-2xl text-white px-4 py-3 bg-teal-700 rounded-lg">
-              เข้ารับชม
+              รัก Ironman มากๆ
             </button>
           </div>
         </div>

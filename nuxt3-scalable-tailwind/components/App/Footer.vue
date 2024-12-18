@@ -12,7 +12,7 @@
           href="#"
           class="font-semibold text-white"
         >
-          Fluke
+          Fluke Ratchanon Decha
         </a>
         . All rights reserved
       </div>
