@@ -27,13 +27,13 @@
             class="avatar relative h-[200px] w-[200px] rounded overflow-hidden mr-10 mb-5 sm:mb-0 shadow-xl"
           >
             <img
-              src="~/assets/images/smk.jpg"
+              src="~/assets/images/fluke.jpg"
               alt="Samit Koyom"
               class="absolute w-full h-full object-cover"
             />
           </div>
           <div>
-            <h1 class="text-2xl font-bold">Hi, I am Samit</h1>
+            <h1 class="text-2xl font-bold">Hi, I am Ratchanon Decha</h1>
             <p class="mt-3 hero__des mb-5">
               I built Nuxt 3 Blog, for Learning. <br />In my free time code something for hobby.
             </p>

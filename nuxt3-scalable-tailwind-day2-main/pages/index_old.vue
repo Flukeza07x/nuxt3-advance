@@ -4,11 +4,11 @@
     meta: [
       { 
         name: 'description', 
-        content: 'Home Nuxt 3, IT Genius Engineering' 
+        content: 'Home Nuxt 3, IT Ratchanon Decha' 
       },
       {
         name: 'keywords',
-        content: 'Home, Nuxt 3, Learning Nuxt 3'
+        content: 'Home, Nuxt 3, Learning Nuxt 3 Ratchanon Decha'
       },
     ],
   })
@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="w-full sm:w-6/12 flex justify-end p-6 sm:p-0">
-          <img loading="lazy" src="~/assets/images/speaker.jpg" alt="" class="w-auto rounded-lg animate-pulse">
+          <img loading="lazy" src="~/assets/images/ironman.jpg" alt="" class="w-auto rounded-lg animate-pulse">
         </div>
       </div>
     </section>

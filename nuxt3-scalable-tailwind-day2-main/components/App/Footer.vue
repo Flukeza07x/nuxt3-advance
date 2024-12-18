@@ -5,14 +5,14 @@
     <div
       class="container py-4 mx-auto flex flex-col sm:flex-row justify-between gap-2 sm:items-center"
     >
-      <a href="#" class="font-semibold text-lg text-white">Nuxt Tailwind</a>
+      <a href="#" class="font-semibold text-lg text-white">Nuxt Tailwind Fluke</a>
       <div class="text-lg">
         Nuxt Tailwind by
         <a
           href="#"
           class="font-semibold text-white"
         >
-          IT Genius
+          Fluke
         </a>
         . All rights reserved
       </div>
