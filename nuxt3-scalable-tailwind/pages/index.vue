@@ -8,7 +8,7 @@
     meta: [
       { 
         name: 'description', 
-        content: 'Home Nuxt 3, IT Fluke' 
+        content: 'Home Nuxt 3, Fluke' 
       },
       {
         name: 'keywords',
@@ -28,7 +28,7 @@
           >
             <img
               src="~/assets/images/smk.jpg"
-              alt="Fluke"
+              alt="Samit Koyom"
               class="absolute w-full h-full object-cover"
             />
           </div>
@@ -72,7 +72,6 @@
             :excerpt="post.excerpt.rendered"
             :slug="post.slug"
           ></BlogGrid>
-          
 
         </div>
       </div>

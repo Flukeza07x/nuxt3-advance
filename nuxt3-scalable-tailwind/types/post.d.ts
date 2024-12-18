@@ -1,5 +1,6 @@
 // define type of post for typescript wordpress rest api
 export interface Post {
+
     id: number;
     date: string;
     title: {
