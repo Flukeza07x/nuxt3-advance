@@ -1,4 +1,4 @@
-<script lang="ts" setup>
+<!-- <script lang="ts" setup>
   useHead({
     title: 'Home',
     meta: [
@@ -26,19 +26,19 @@
       >
         <div class="w-full sm:w-6/12">
           <h1 class="text-4xl sm:text-6xl font-bold xl:leading-[4rem] text-skin-base">
-            ลำโพงบลูทูชที่ยอดเยี่ยม
+            Ironman Fluke รักมากนะ
           </h1>
           <p class="text-xl mt-4 mb-14 text-skin-muted">
-            จากค่ายมาแชลอันโด่งดัง
+            Ironman Fluk รักมากนะ
           </p>
           <div class="space-x-4">
             <button class="text-2xl text-white px-4 py-3 bg-teal-700 rounded-lg">
-              เข้ารับชม
+              Ironman Fluke รักมากนะ
             </button>
           </div>
         </div>
         <div class="w-full sm:w-6/12 flex justify-end p-6 sm:p-0">
-          <img loading="lazy" src="~/assets/images/speaker.jpg" alt="" class="w-auto rounded-lg animate-pulse">
+          <img loading="lazy" src="~/assets/images/ironman.jpg" alt="" class="w-auto rounded-lg animate-pulse">
         </div>
       </div>
     </section>
@@ -48,4 +48,17 @@
 
 <style scoped>
 
-</style>
+/* animation: bounce 1s infinite;
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+} */
+
+</style> -->
