@@ -37,14 +37,14 @@ postcss: {
 
 modules: [
   'nuxt-icon',
-  [
-    // Nuxt Robots
-    '@nuxtjs/robots',
-    {
-      UserAgent: "*",
-      Disallow: "",
-    }
-  ],
+  // [
+  //   // Nuxt Robots
+  //   '@nuxtjs/robots',
+  //   {
+  //     UserAgent: "*",
+  //     Disallow: "",
+  //   }
+  // ],
 ],
 
 runtimeConfig: {
