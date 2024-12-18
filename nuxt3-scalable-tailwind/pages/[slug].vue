@@ -62,9 +62,6 @@
     </section>
 </template>
 
-
-
-
 <style>
 .blog__content {
   @apply sm:px-10;

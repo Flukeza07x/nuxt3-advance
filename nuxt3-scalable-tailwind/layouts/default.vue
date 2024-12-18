@@ -2,15 +2,13 @@
 
 <template>
   <div>
-
     <AppHeader />
-    
-    <div class="container mx-auto px-4 sm:px-0">
+
+    <div class="mx-auto px-4 sm:px-0">
       <slot />
     </div>
-
+    
     <AppFooter />
-
   </div>
 </template>
 

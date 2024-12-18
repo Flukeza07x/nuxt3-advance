@@ -1,29 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  ssr: true,
 
-  app: {
-    head: {
-        htmlAttrs: {
-          lang: 'en'
-        },
-        bodyAttrs: {
-          class: 'demo'
-        },
-        charset: 'utf-8',
-        titleTemplate: '%s | IT Fluke',
-        meta: [
-          {
-            name: 'author',
-            content: 'Fluke Ltd., Thailand'
+    ssr: true,
+  
+    app: {
+      head: {
+          htmlAttrs: {
+            lang: 'en'
           },
-          {
-            name: 'viewport',
-            content: 'width=device-width, initial-scale=1, maximum-scale=5'
-          }
-        ]
-    }
-},
+          bodyAttrs: {
+            class: 'demo'
+          },
+          charset: 'utf-8',
+          titleTemplate: '%s | IT Genius Engineering',
+          meta: [
+            {
+              name: 'author',
+              content: 'IT Genius Engineering Ltd., Thailand'
+            },
+            {
+              name: 'viewport',
+              content: 'width=device-width, initial-scale=1, maximum-scale=5'
+            }
+          ]
+      }
+  },
 
   css: ['~/assets/css/tailwind.css'],
 
@@ -36,14 +37,14 @@ export default defineNuxtConfig({
 
   modules: [
     'nuxt-icon',
-    [
-      // Nuxt Robots
-      '@nuxtjs/robots',
-      {
-        UserAgent: "*",
-        Disallow: "",
-      }
-    ],
+    // [
+    //   // Nuxt Robots
+    //   '@nuxtjs/robots',
+    //   {
+    //     UserAgent: "*",
+    //     Disallow: "",
+    //   }
+    // ],
   ],
 
   runtimeConfig: {
@@ -52,5 +53,4 @@ export default defineNuxtConfig({
     }
   },
 
-  compatibilityDate: '2024-12-18',
 })
