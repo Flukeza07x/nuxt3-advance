@@ -38,7 +38,7 @@
               I built Nuxt 3 Blog, for Learning. <br />In my free time code something for hobby.
             </p>
             <a
-              href="https://twitter.com/iamsamit"
+              href="https://www.facebook.com/RatchanonDechaza07x/t"
               class="bg-sky-500 hover:bg-primary-600 py-2 px-4 rounded text-white inline-flex items-center gap-2"
             >
               <svg
