@@ -1,10 +1,9 @@
 <script setup lang="ts">
 
+    // รับค่า params จาก url
+    const params = useRoute().params
 
- //รับค่า params จาก url
- const params = useRoute().params
-
- //call wp api
+    // call wp api
     const { data: posts, pending } = await useWpApi().getPost(params.slug as string)
     const post = posts.value?.[0]
 
@@ -17,10 +16,8 @@
             },
         ],
     })
-    
+
 </script>
-
-
 
 <template>
     <section class="container mx-auto py-10 sm:py-16">

@@ -5,7 +5,7 @@
 
     <AppHeader />
     
-    <div class="container mx-auto px-4 sm:px-0 py-4">
+    <div class="container mx-auto px-4 sm:px-0">
       <slot />
     </div>
 

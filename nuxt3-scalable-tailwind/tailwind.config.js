@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-
 const defaultTheme = require('tailwindcss/defaultTheme')
-
-
-
-export default {
+module.exports = {
   mode: 'jit',
   content: [
     "./components/**/*.{js,vue,ts}",
@@ -17,15 +13,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Noto Serif Thai' , ...defaultTheme.fontFamily.sans]
-      },
-      colors: {
-        primary: {
-          400: '#4CAF50', // แทนด้วยโค้ดสีของคุณ
-        },
-      },
+        sans: ['IBM Plex Sans Thai',...defaultTheme.fontFamily.sans]
+      }
     },
   },
   plugins: [],
 }
-
