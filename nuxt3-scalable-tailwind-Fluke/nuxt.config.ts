@@ -12,11 +12,11 @@ export default defineNuxtConfig({
             class: 'demo'
           },
           charset: 'utf-8',
-          titleTemplate: '%s | IT Genius Engineering',
+          titleTemplate: '%s | FLuke Ratchaonn Decha',
           meta: [
             {
               name: 'author',
-              content: 'IT Genius Engineering Ltd., Thailand'
+              content: 'FLuke Ratchaonn Decha Ltd., Thailand'
             },
             {
               name: 'viewport',
