@@ -38,7 +38,7 @@
           </div>
         </div>
         <div class="w-full sm:w-6/12 flex justify-end p-6 sm:p-0">
-          <img loading="lazy" src="~/assets/images/speaker.jpg" alt="" class="w-auto rounded-lg animate-pulse">
+          <img loading="lazy" src="~/assets/images/smk.jpg" alt="" class="w-auto rounded-lg animate-pulse">
         </div>
       </div>
     </section>
