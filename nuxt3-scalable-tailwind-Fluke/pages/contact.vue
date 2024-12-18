@@ -4,7 +4,7 @@ useHead({
   meta: [
     {
       name: "description",
-      content: "Contact",
+      content: "Contact Fluke Ratchanon Decha",
     },
   ],
 });

@@ -8,11 +8,11 @@
     meta: [
       { 
         name: 'description', 
-        content: 'Home Nuxt 3, IT Genius Engineering' 
+        content: 'Home Nuxt 3, Fluke Ratchanon Decha' 
       },
       {
         name: 'keywords',
-        content: 'Home, Nuxt 3, Learning Nuxt 3'
+        content: 'Home, Nuxt 3, Learning Nuxt 3 Fluke Ratchanon Decha'
       },
     ],
   })
