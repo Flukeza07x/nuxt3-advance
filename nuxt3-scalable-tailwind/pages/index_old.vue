@@ -1,14 +1,14 @@
-<!-- <script lang="ts" setup>
+<script lang="ts" setup>
   useHead({
     title: 'Home',
     meta: [
       { 
         name: 'description', 
-        content: 'Home Nuxt 3, IT Genius Engineering' 
+        content: 'Home Nuxt 3, IT Fluke' 
       },
       {
         name: 'keywords',
-        content: 'Home, Nuxt 3, Learning Nuxt 3'
+        content: 'Home, Nuxt 3, Learning Nuxt 3 ironman'
       },
     ],
   })
@@ -26,14 +26,14 @@
       >
         <div class="w-full sm:w-6/12">
           <h1 class="text-4xl sm:text-6xl font-bold xl:leading-[4rem] text-skin-base">
-            Ironman Fluke รักมากนะ
+            ลำโพงบลูทูชที่ยอดเยี่ยม
           </h1>
           <p class="text-xl mt-4 mb-14 text-skin-muted">
-            Ironman Fluk รักมากนะ
+            จากค่ายมาแชลอันโด่งดัง
           </p>
           <div class="space-x-4">
             <button class="text-2xl text-white px-4 py-3 bg-teal-700 rounded-lg">
-              Ironman Fluke รักมากนะ
+              เข้ารับชม
             </button>
           </div>
         </div>
@@ -48,17 +48,4 @@
 
 <style scoped>
 
-/* animation: bounce 1s infinite;
-
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(-5%);
-    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-  }
-  50% {
-    transform: translateY(0);
-    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-  }
-} */
-
-</style> -->
+</style>

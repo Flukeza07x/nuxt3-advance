@@ -33,12 +33,12 @@
             />
           </div>
           <div>
-            <h1 class="text-2xl font-bold">Hi, I am Samit</h1>
+            <h1 class="text-2xl font-bold">Hi, I am Fluke</h1>
             <p class="mt-3 hero__des mb-5">
               I built Nuxt 3 Blog, for Learning. <br />In my free time code something for hobby.
             </p>
             <a
-              href="https://twitter.com/iamsamit"
+              href="https://www.facebook.com/RatchanonDechaza07x/"
               class="bg-sky-500 hover:bg-primary-600 py-2 px-4 rounded text-white inline-flex items-center gap-2"
             >
               <svg
