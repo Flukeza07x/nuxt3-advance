@@ -85,4 +85,18 @@ interface ProductResponse {
   data: ProductData[]
 }
 
-export { ProductResponse }
+// MetaResponse is used for pagination
+interface MetaAttributes {
+  pagination: {
+    page: number
+    pageSize: number
+    pageCount: number
+    total: number
+  }
+}
+
+interface MetaResponse {
+  meta: MetaAttributes
+}
+
+export { ProductResponse , MetaResponse}

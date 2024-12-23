@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-  import EditData from "@/components/tables/EditData"
   import useStrapiApi from "@/composables/useStrapiApi"
 
   definePageMeta({
@@ -21,33 +20,50 @@
     ]
   })
 
+  // Dialog ========================================================
   const dialog = ref(false);
   const search = ref("");
-  const desserts = ref(EditData);
-  const editedIndex = ref(-1);
-
-  // Call Product API useStrapiApi
-  const { data: products, error } = await useStrapiApi().getProducts()
-  console.log(products.value?.data)
-
+  const editedIndex = ref(-1)
 
   function close() {
     dialog.value = false;
     setTimeout(() => {
-    }, 300);
+    }, 300)
   }
-
-  //Methods
-  const filteredList = computed(() => {
-    return desserts.value.filter((user: any) => {
-      return user.userinfo.toLowerCase().includes(search.value.toLowerCase());
-    });
-  });
 
   //Computed Property
   const formTitle = computed(() => {
-    return editedIndex.value === -1 ? "New Product" : "Edit Product";
-  });
+    return editedIndex.value === -1 ? "Add New Product" : "Edit Product"
+  })
+
+  // ================================================================
+
+  // Pagination =====================================================
+  const initPage = ref(1)
+
+  // Call Product API useStrapiApi
+  const { data: products } = await useStrapiApi().getProducts(initPage.value, 25)
+  // console.log(products.value?.data)
+
+  // สร้างตัวแปรเพื่อเก็บค่า page ที่เลือก
+  const page:any = ref(products.value?.meta.pagination.page)
+
+  // สร้างตัวแปรเพื่อเก็บค่าจำนวนหน้าทั้งหมด
+  const pageCount:any = ref(products.value?.meta.pagination.pageCount)
+
+  // console.log(page.value)
+  // console.log(pageCount.value)
+
+  // สร้างฟังก์ชันเพื่อเปลี่ยนหน้า
+  const handlePageChange = async (page:any) => {
+    // console.log(page)
+    initPage.value = page
+    // console.log(initPage.value)
+    // สั่งให้เรียกข้อมูลใหม่
+    const { data: newproducts } = await useStrapiApi().getProducts(initPage.value, 25)
+    products.value = newproducts.value
+  }
+  // ================================================================
 
 </script>
 
@@ -148,6 +164,17 @@
 
             </v-col>
           </v-row>
+
+          <!-- Add Pagination -->
+          <v-pagination 
+            v-model="page" 
+            :length="pageCount"
+            @next="handlePageChange"
+            @prev="handlePageChange"
+            @update:modelValue="handlePageChange">
+          </v-pagination>
+          
+
 
           <v-table class="mt-5">
 

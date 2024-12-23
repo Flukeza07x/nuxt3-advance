@@ -63,7 +63,7 @@
 			if (error.value != null) { // error
 				
 				if(error.value.status === 400){
-					 console.log('Login failed! Please check your email and password.')
+					// console.log('Login failed! Please check your email and password.')
 					$swal.fire({
 						icon: 'error',
 						title: 'เข้าสู่ระบบไม่สำเร็จ',
