@@ -1,5 +1,5 @@
 {
-  "name": "strapi-api",
+  "name": "strapi-mysql-api",
   "version": "0.1.0",
   "private": true,
   "description": "A Strapi application",
@@ -12,9 +12,10 @@
   },
   "dependencies": {
     "@strapi/plugin-cloud": "5.6.0",
+    "@strapi/plugin-documentation": "^5.6.0",
     "@strapi/plugin-users-permissions": "5.6.0",
     "@strapi/strapi": "5.6.0",
-    "better-sqlite3": "11.3.0",
+    "mysql2": "3.9.8",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
@@ -31,6 +32,6 @@
     "npm": ">=6.0.0"
   },
   "strapi": {
-    "uuid": "1d0b8711-0a74-47b2-ae79-6bca36037503"
+    "uuid": "3d248a48-00ed-43f8-bf30-4a1462663051"
   }
 }

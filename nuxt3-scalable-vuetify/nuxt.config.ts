@@ -3,6 +3,8 @@ import vuetify from "vite-plugin-vuetify"
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 
+    
+
     // enable ssr for rendering
     ssr: true,
 
@@ -75,6 +77,14 @@ export default defineNuxtConfig({
                   content: "Fluke Ratchanon Decha Ltd., Thailand"
                 },
               ]
+        },
+    },
+    // runtime config
+    runtimeConfig: {
+        public: {
+            strapi: {
+                url: process.env.STRAPI_URL || "http://localhost:1337/api",
+            },
         },
     },
 

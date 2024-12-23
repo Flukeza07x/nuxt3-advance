@@ -27,13 +27,57 @@
 	// submit form
 	const submit = async () => {
 		
-		// check form is valid
-		if (email.value && password.value) {
+		//console.log(ruleEmail(email.value))
 
-			console.log(email.value, password.value)
+		
+		// check form is valid
+		// check form is valid
+		if (ruleRequired(email.value) == true && ruleEmail(email.value) == true && rulePassLen(password.value) == true) {
+
+			// console.log(email.value, password.value)
 
 			// redirect to dashboard
 			//router.push('/dashboard')
+
+			// console.log(email.value, password.value)
+
+			/// useRuntimeConfig() for get env
+			const config = useRuntimeConfig()
+			const STRAPI_URL: string = config.strapi.url
+
+			// login strapi with usefetch()
+			const { data, error } = await useFetch(`${STRAPI_URL}/auth/local`, {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					"identifier": email.value,
+					"password": password.value
+				}),
+			})
+
+			// check error
+			if (error.value != null) { // error
+				
+				if(error.value.status === 400){
+					console.log('Login failed! Please check your email and password.')
+				}else{
+					console.log('Request failed:', error.value.message)
+				}
+
+			}else{ // success
+
+				console.log((data as { value: { jwt: string } }).value.jwt)
+				
+				// set token to localStorage
+				localStorage.setItem('token', (data as { value: { jwt: string } }).value.jwt)
+
+				// redirect to dashboard
+				await router.push({path:'/backend/dashboard'})
+
+			}
+
 		}
 
 	}
