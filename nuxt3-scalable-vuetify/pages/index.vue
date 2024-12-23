@@ -5,13 +5,22 @@
 		meta: [
 		{ 
 			name: 'description', 
-			content: 'Sign In Nuxt 3, IT Fluke Ratchanon Decha' 
+			content: 'Sign In Nuxt 3, IT Genius Engineering' 
 		},
 		{
 			name: 'keywords',
 			content: 'Sign In, Nuxt 3, Learning Nuxt 3'
 		},
 		],
+	})
+
+	// sweetalert2
+	const { $swal } = useNuxtApp()
+
+	// create const for useCookie()
+	const token = useCookie('token', {
+		maxAge: 60 * 60, // 1 hour
+		// expires: new Date(Date.now() + 60 * 60 * 24 * 7), // 1 week
 	})
 
 	// ref const for email and password
@@ -26,22 +35,15 @@
 
 	// submit form
 	const submit = async () => {
-		
-		//console.log(ruleEmail(email.value))
 
+		// console.log(ruleEmail(email.value))
 		
-		// check form is valid
 		// check form is valid
 		if (ruleRequired(email.value) == true && ruleEmail(email.value) == true && rulePassLen(password.value) == true) {
 
 			// console.log(email.value, password.value)
 
-			// redirect to dashboard
-			//router.push('/dashboard')
-
-			// console.log(email.value, password.value)
-
-			/// useRuntimeConfig() for get env
+			// useRuntimeConfig() for get env
 			const config = useRuntimeConfig()
 			const STRAPI_URL: string = config.strapi.url
 
@@ -61,20 +63,50 @@
 			if (error.value != null) { // error
 				
 				if(error.value.status === 400){
-					console.log('Login failed! Please check your email and password.')
+					 console.log('Login failed! Please check your email and password.')
+					$swal.fire({
+						icon: 'error',
+						title: 'เข้าสู่ระบบไม่สำเร็จ',
+						text: 'กรุณาตรวจสอบอีเมล์และรหัสผ่านของคุณ',
+						confirmButtonText: 'ปิดหน้าต่าง'
+					})
 				}else{
 					console.log('Request failed:', error.value.message)
 				}
 
 			}else{ // success
 
-				console.log((data as { value: { jwt: string } }).value.jwt)
-				
-				// set token to localStorage
-				localStorage.setItem('token', (data as { value: { jwt: string } }).value.jwt)
+				let timerInterval: any
+				$swal.fire({
+					title: 'กำลังเข้าสู่ระบบ',
+					html: 'กรุณารอสักครู่ <b></b> วินาที',
+					timer: 1000,
+					timerProgressBar: true,
+					didOpen: () => {
+						$swal.showLoading()
+						timerInterval = setInterval(() => {
+						const content = $swal.getHtmlContainer()
+						if (content) {
+							const b = content.querySelector('b')
+							if (b) {
+								b.textContent =$swal.getTimerLeft() / 1000
+							}
+						}
+						}, 100)
+					},
+					willClose: () => {
+						clearInterval(timerInterval)
+					}
+				}).then( async (result: any) => {
+					if(result.dismiss === $swal.DismissReason.timer) {
 
-				// redirect to dashboard
-				await router.push({path:'/backend/dashboard'})
+						// set token to cookie
+						token.value = (data as { value: { jwt: string } }).value.jwt
+
+						// redirect to dashboard
+						await router.push({path:'/backend/dashboard'})
+					}
+				})
 
 			}
 

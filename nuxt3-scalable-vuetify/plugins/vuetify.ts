@@ -1,26 +1,23 @@
-// import createVuetify 
+// import createVuetify from "vuetify"
 import { createVuetify } from "vuetify"
 
+import { mdi } from 'vuetify/iconsets/mdi'
+import "@mdi/font/css/materialdesignicons.css"
+
 // import custom icons from helpers
-import { aliases, custom } from "~/helpers/customIcons"
+import { aliases, custom } from "@/helpers/customIcons"
 
-// import themes from helpers
-import { LIGHT_THEME, lightTheme, DARK_THEME, darkTheme } from "~/helpers/themes"
+// import theme from "@/helpers/themes"
+import { LIGHT_THEME, lightTheme, DARK_THEME, darkTheme } from "@/helpers/themes"
 
-// import defaults from helpers
-import { defaults } from "~/helpers/defaults"
+// import defaults from "@/helpers/defaults"
+import { defaults } from "@/helpers/defaults"
 
-// create vuetify instance
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin((nuxtApp ) => {
+    // Create a new Vuetify instance
     const vuetify = createVuetify({
-
-        // enable ssr for rendering
         ssr: true,
-
-        // default vuetify components
         defaults,
-
-        // theme options
         theme: {
             defaultTheme: LIGHT_THEME,
             themes: {
@@ -34,16 +31,17 @@ export default defineNuxtPlugin((nuxtApp) => {
                 darken: 3,
             }
         },
-        // icons options
+        // Add the custom iconset
         icons: {
             defaultSet: "custom",
             aliases,
             sets: {
                 custom,
+                mdi,
             },
         },
     })
 
-    // add vuetify to nuxt app
+    // Inject it to nuxtApp
     nuxtApp.vueApp.use(vuetify)
 })
